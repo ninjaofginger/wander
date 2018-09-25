@@ -12,7 +12,8 @@
 **------------------------------------*/
 
 html {
-  margin-top: 50px; // REMOVE WHEN WEBSITE IS COMPLETE
+  // REMOVE WHEN WEBSITE IS COMPLETE //
+  //margin-top: 50px;
 }
 
 *,
@@ -45,6 +46,10 @@ img {
   content: "";
 }
 
+.content {
+  margin: 0 auto;
+  max-width: 900px;
+}
 
 /*------------------------------------**
   $HEADER
@@ -63,7 +68,7 @@ section {
 
 #middle-top-section {
   width: 100%;
-  height: 750px;
+  height: auto;
   background: $wanderWhite;
 }
 
@@ -72,49 +77,34 @@ section {
   height: 200px;
 }
 
-#low-section {
-  width: 100%;
-  height: 400px;
-  background: $wanderWhite;
-}
-
-footer {
-  width: 100%;
-  height: 300px;
-  background: $orange;
-}
 
 .hero {
+  position: relative;
   height: 90vh;
   padding: 0;
-  position: center;
   overflow: hidden;
-  border-bottom: 5px solid;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  z-index: -100;
+  border-bottom: 5px solid $mustard;
+
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-45%);
+  }
+
 }
 
-@media only screen and (max-width: 1200px) {
-  #top-section {
-    width: 100%;
-    height: 100%;
-  }
 
-  #middle-top-section {
-    width: 100%;
-    height: 960px;
+@include media('>medium') {
+  .hero video {
+    min-height: 100%;
+    max-height: none;
   }
-
-  .hero {
-    height: 80vh;
-  }
-
-  .button {
-    width: 100%;
-    height: 70px;
-    margin-top: 8%;
-  }
-
 }
 

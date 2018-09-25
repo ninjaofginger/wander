@@ -18,6 +18,7 @@ input[type="password"],
 input[type="number"] {
   border-bottom: solid 1px $mustard;
   background-color: $wanderWhite;
+  color: $wanderBlack;
   padding: 1rem 1.5rem;
   width: 100%;
   &::placeholder {
