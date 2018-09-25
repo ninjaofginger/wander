@@ -33,9 +33,12 @@
   </div>
 
   <?php if($page['header']): ?>
+
+
+
     <div class="header-region">
 
-<!--        BURGER MENU-->
+        <!--        BURGER MENU-->
         <div class="header-half">
             <div class="burger">
                 <div class="burger__patty"></div>
@@ -46,8 +49,8 @@
             <nav class="menu">
                 <div class="menu__brand">
                     <a href="index.php">
-                        <div class="logo_full"><img src="dist/images/logo_flat.png"></div>
-                        <div class="logo_icon"><img src="dist/images/icon.png"></div>
+                        <div class="logo_full"><img src="sites/default/files/logo_flat.png"></div>
+                        <div class="logo_icon"><img src="sites/default/files/icon.png"></div>
                     </a>
                 </div>
                 <ul class="menu__list">
@@ -84,7 +87,16 @@
 
     <div class="container">
 
-  <div role="main" id="main-content">
+        <div role="main" id="main-content">
+
+            <div class="hero" data-0="opacity: 1;" data-450="opacity: 0;">
+
+
+                <video autoplay muted id="myVideo" class="hero__video">
+                    <source src="sites/default/files/herovid.mp4" type="video/mp4">
+                </video>
+
+            </div>
 
 
     <?php print render($title_prefix); ?>
@@ -154,9 +166,13 @@
             </div>
         </div>
     <?php endif; ?>
+
+
 </div><!-- /page-->
 
+
 <?php include "php_includes/scripts.php"?>
+
 
 <footer role="contentinfo">
   <?php print render($page['footer']); ?>
